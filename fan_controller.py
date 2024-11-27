@@ -31,7 +31,7 @@ def main():
         smtpcode = config["SMTPCODE"]
         mailsender = config["MAILSENDER"]
         mailreceiver = config["MAILRECEIVER"]
-        webserver = config["WebServer"]
+        webserver = config["WEBSERVER"]
         pwm_fan = config["PWM_FAN"]
         url = config["URL"]
         file.close()

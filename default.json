@@ -15,6 +15,6 @@
     "MAILSENDER":"",
     "MAILRECEIVER":"",
     "NAME": "PI - ToChange",
-    "WebServer": true,
+    "WEBSERVER": true,
     "URL": ""
 }

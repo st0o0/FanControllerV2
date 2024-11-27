@@ -1,0 +1,8 @@
+[Unit]
+Description=Run Fan Controller delayed 
+
+[Timer]
+OnBootSec=2min
+Unit=fan-controller.service
+[Install]
+WantedBy=timers.target

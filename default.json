@@ -1,0 +1,20 @@
+  
+{
+    "PWM_FAN": false,
+    "FAN_OFF_TEMP":25,
+    "FAN_MAX_TEMP":40,
+    "UPDATE_INTERVAL":10,
+    "PWM_FREQ":25000,
+    "PWM_PIN":18,
+    "READ_PIN": 23,
+    "PPR": 2,
+    "SMTPHOST":"",
+    "SMTPPORT":587,
+    "SMTPUSER":"",
+    "SMTPCODE":"",
+    "MAILSENDER":"",
+    "MAILRECEIVER":"",
+    "NAME": "PI - ToChange",
+    "WebServer": true,
+    "URL": ""
+}

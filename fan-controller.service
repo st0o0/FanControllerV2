@@ -1,0 +1,14 @@
+[Unit]
+Description=Fan Controller
+
+[Service]
+Type=simple
+ExecStartPre=sudo pigpiod
+ExecStart=/usr/bin/python3 -u /usr/local/bin/fan-controller/fan_controller.py
+ExecStopPost=sh /usr/local/bin/fan-controller/constant_fan.sh
+User=root
+StandardOutput=journal
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

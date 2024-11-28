@@ -17,6 +17,7 @@ def read_temp():
 def main():
     with open("/etc/fan-controller/config.json", "r") as file:
         config = json.load(file)
+        pwm_fan = config["PWM_FAN"]
         pwm_pin = config["PWM_PIN"]
         pwm_freq = config["PWM_FREQ"]
         read_pin = config["READ_PIN"]
@@ -32,7 +33,6 @@ def main():
         mailsender = config["MAILSENDER"]
         mailreceiver = config["MAILRECEIVER"]
         webserver = config["WEBSERVER"]
-        pwm_fan = config["PWM_FAN"]
         url = config["URL"]
         file.close()
 

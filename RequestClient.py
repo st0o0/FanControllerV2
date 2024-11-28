@@ -4,7 +4,6 @@ import requests
 class RequestClient:
     __url: str
     __name: str
-    __IP: int
 
     def __init__(self, url: str, name: str):
             self.__url = url
@@ -15,5 +14,9 @@ class RequestClient:
                 "name": self.__name,
                 "temp": temp
             }
-            x = requests.post(self.__url, data=json_object, json=json_object)
-            return x
+            try:
+                result =  requests.post(self.__url, data=json_object, json=json_object, timeout=5)
+            except requests.exceptions.Timeout:
+                print("Timed out")
+                return None
+            return result

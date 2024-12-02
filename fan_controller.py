@@ -52,9 +52,9 @@ def main():
             if request_client == 0:
                 request_client = RequestClient(url, device)
             x = request_client.send(cpu_temp)
-            if message == "":
+            if message == "" and x is not None:
                 message = "CPUTEMP: " + str(cpu_temp) + "°C" + "\n" + "LAST REPONSE: " + str(x.status_code) + "\n" + "TIME: " + str(time.asctime(time.localtime(time.time()))) + "\n" + "Device: "+ device
-        if (cpu_temp > fan_max_temp and fan_speed > 250) and time.perf_counter() - last_warning < 1200:
+        if (cpu_temp > fan_max_temp) and time.perf_counter() - last_warning < 1200:
             last_warning = time.perf_counter()
             mail.send(message, "[WARN] CPUTEMP: " + str(cpu_temp) + " // TIME: " + str(time.asctime(time.localtime(time.time()))))
         time.sleep(update_interval)

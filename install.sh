@@ -5,9 +5,9 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
-echo "install python3.7 and pigpio"
- apt-get update
- apt-get install pigpio python-pigpio python3-pigpio python3.7 python python-setuptools python3-setuptools -y
+echo "install python3 and pigpio"
+apt-get update
+apt-get install pigpio python-pigpio python3-pigpio python3 python python-setuptools python3-setuptools -y
 
 
 echo "settling to /usr/local/bin/fan-controller/..."

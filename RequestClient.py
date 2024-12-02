@@ -16,7 +16,7 @@ class RequestClient:
             }
             try:
                 result =  requests.post(self.__url, data=json_object, json=json_object, timeout=5)
-            except requests.exceptions.Timeout:
-                print("Timed out")
+            except Exception as e:
+                print(e.args)
                 return None
             return result
